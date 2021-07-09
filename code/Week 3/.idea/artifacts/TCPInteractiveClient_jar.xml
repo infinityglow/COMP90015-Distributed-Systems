@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TCPInteractiveClient:jar">
+    <output-path>$PROJECT_DIR$/TCPInteractiveClient/out/artifacts/TCPInteractiveClient_jar</output-path>
+    <root id="archive" name="TCPInteractiveClient.jar">
+      <element id="module-output" name="TCPInteractiveClient" />
+    </root>
+  </artifact>
+</component>

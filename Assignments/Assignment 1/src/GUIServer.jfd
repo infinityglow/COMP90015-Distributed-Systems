@@ -1,0 +1,54 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.7" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundleName": "GUI"
+	"i18n.keyPrefix": "GUIServer"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"title": new FormMessage( null, "GUIServer.this.title" )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "panel"
+				"border": new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {par t:::p {seq {space :p:61:p, comp label1:::p:262:p}, seq l {space :p:41:p, comp scrollPane1:::::x}, seq l {space :p:71:p, comp connect:::p:90:p, space :::x, comp disconnect:::p:90:p, space :p:30:p}}, space ::51:x}}"
+					"$verticalGroup": "par l {seq l {comp label1:::p::p, space u:::p, comp scrollPane1::::139:x, space u:::p, par b {comp connect::b:p:40:p, comp disconnect::b:p:40:p}, space :p:19:p}}"
+				} ) {
+					name: "contentPanel"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"text": new FormMessage( null, "GUIServer.label1.text" )
+						"font": new java.awt.Font( ".AppleSystemUIFont", 1, 24 )
+						"horizontalAlignment": 0
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "connect"
+						"text": new FormMessage( null, "GUIServer.connect.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "connectActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "disconnect"
+						"text": new FormMessage( null, "GUIServer.disconnect.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "disconnectActionPerformed", true ) )
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane1"
+						add( new FormComponent( "javax.swing.JEditorPane" ) {
+							name: "textarea"
+							"editable": false
+						} )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

@@ -1,0 +1,105 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.7" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundleName": "GUI"
+	"i18n.keyPrefix": "GUIClient"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"title": new FormMessage( null, "GUIClient.this.title" )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "dialogPane"
+				"border": new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :::p, par l {comp guidelabel:::::x, seq l {space :6:6:p, par l {seq {comp remove:::p:90:p, space s:::p, comp update:::p:90:p, space s:::p, comp disconnect:::p:90:p}, seq l {comp query:::p:90:p, space s:::p, comp add:::p:90:p, space s:::p, comp connect:::p:90:p}, seq l {comp submit:::p:90:p, space s:::p, comp clear:::p:90:p, space s:::p, comp cancel:::p:90:p}}}, comp label2::l:p:312:p, comp scrollPane2::l:p:320:p}, space s:::p, comp scrollPane1:::p:310:p, space :::p}, comp label1::t:::x}"
+					"$verticalGroup": "par l {seq l {space :::p, comp label1:::p::p, space :p:26:p, par l {seq {comp guidelabel:::p:24:p, space :p:12:p, comp scrollPane2::::72:x, space :::p, par b {comp submit::b:p:40:p, comp clear::b:p:40:p, comp cancel::b:p:40:p}, space s:::p, comp label2:::p:34:p, space s:::p, par b {comp query::b:p:40:p, comp add::b:p:40:p, comp connect::b:p:40:p}, space s:::p, par b {comp disconnect::b:p:40:p, comp update::b:p:40:p, comp remove::b:p:40:p}}, comp scrollPane1::::322:x}, space :p:14:p}}"
+				} ) {
+					name: "panel"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"text": new FormMessage( null, "GUIClient.label1.text" )
+						"font": new java.awt.Font( ".AppleSystemUIFont", 1, 24 )
+						"horizontalAlignment": 0
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane1"
+						add( new FormComponent( "javax.swing.JEditorPane" ) {
+							name: "textarea"
+							"editable": false
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "guidelabel"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane2"
+						add( new FormComponent( "javax.swing.JEditorPane" ) {
+							name: "textbox"
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": new FormMessage( null, "GUIClient.label2.text" )
+						"font": new java.awt.Font( ".AppleSystemUIFont", 1, 18 )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "add"
+						"text": new FormMessage( null, "GUIClient.add.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "submitActionPerformed", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "query"
+						"text": new FormMessage( null, "GUIClient.query.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "queryActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "connect"
+						"text": new FormMessage( null, "GUIClient.connect.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "connectActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "remove"
+						"text": new FormMessage( null, "GUIClient.remove.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "removeActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "update"
+						"text": new FormMessage( null, "GUIClient.update.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "updateActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "disconnect"
+						"text": new FormMessage( null, "GUIClient.disconnect.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "DisconnectActionPerformed", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "disconnectActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "submit"
+						"text": new FormMessage( null, "GUIClient.submit.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "submitActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "clear"
+						"text": new FormMessage( null, "GUIClient.clear.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "clearActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "cancel"
+						"text": new FormMessage( null, "GUIClient.cancel.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cancelActionPerformed", true ) )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "South"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 15, 35 )
+			"size": new java.awt.Dimension( 670, 455 )
+		} )
+	}
+}
